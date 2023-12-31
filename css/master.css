@@ -1,0 +1,278 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-image: url(../imgs/bg.jpg);
+    background-size: cover;
+}
+
+.header-layer ul li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.header-layer h5 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 55px;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 200;
+    line-height: 72px;
+}
+
+@media (max-width:767px) {
+    h1 {
+        font-size: 26px;
+    }
+
+}
+
+@media (min-width:767px) and (max-width:870px) {
+    h1 {
+        font-size: 50px;
+    }
+
+}
+
+h1 span {
+    font-weight: 400;
+}
+
+.progress {
+    height: 1.5rem;
+}
+
+section:nth-child(2) h3 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 33px;
+}
+
+section:nth-child(2) p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: rgb(116, 129, 130);
+}
+
+article,
+.like-article {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgb(116, 129, 130);
+}
+
+.dotted-layer {
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    width: 80%;
+    height: 80%;
+    left: -20px;
+    bottom: -20px;
+    z-index: -1;
+}
+
+.progress {
+    box-shadow: 0px 15px 10px rgba(17, 17, 17, 0.15) inset;
+}
+
+#SERVICES .inner {
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+
+#SERVICES div.inner div,
+#Contact div.inner div {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+#SERVICES div.inner:hover div,
+#Contact div.inner:hover div {
+    background-color: #1C1C1C !important;
+    color: RGB(238, 238, 238);
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    width: fit-content;
+    z-index: 2;
+}
+
+h2::before {
+    content: "";
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    left: 0;
+    bottom: -15%;
+    z-index: -1;
+}
+
+#Works .layer {
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    transition: all 0.5s;
+}
+
+#Works .layer span {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+#Works figure:hover .layer {
+    opacity: 1 !important;
+}
+
+#Clients img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.carousel-indicators button {
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50%;
+}
+
+section:nth-child(6) span:nth-child(2) {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 33px;
+}
+
+section:nth-child(6) p {
+    font-weight: 600;
+}
+
+.card>div:hover img {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.card:hover .layer
+ {
+    opacity: 1;
+    transform: scale(1);
+    transform: rotatey(0deg) scale(1);
+}
+
+.card .layer {
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    bottom: 5px;
+    opacity: 0;
+    transform: scale(0.8);
+    transform: rotatey(180deg) scale(0.6);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.card span {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+input,
+textarea {
+    border: unset;
+    outline: none;
+}
+
+.btn-dark:hover {
+    color: RGB(52, 52, 52);
+    background: white;
+}
+
+/* animation when site open --loading */
+.top-animation-layer {
+    z-index: 999999999999;
+    animation: 3s top-layer;
+    animation-fill-mode: forwards;
+}
+
+.bottom-animation-layer {
+    z-index: 999999999999;
+    animation: 3s bottom-layer;
+    animation-fill-mode: forwards;
+}
+
+.loaded {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    left: calc(50% - 35px);
+    top: calc(50% - 35px);
+    border: 10px solid;
+    border-color: rgba(0, 0, 0, 0.2)black  rgba(0, 0, 0, 0.2)  rgba(0, 0, 0, 0.2) ;
+    z-index: 999999;
+    animation: 0.75s  loaded infinite;
+    animation-fill-mode:forwards;
+    animation-iteration-count: 2;
+}
+ 
+@keyframes top-layer {
+    0% {
+       transform: translateY(0%);
+
+    }
+
+    100% {
+       
+       
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+} 
+ 
+@keyframes bottom-layer {
+    from {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+       
+    }
+}
+
+@keyframes loaded {
+    0% {
+        transform: rotate(0deg);
+        display: block;
+    }
+    100% {
+        transform: rotate(360deg);
+        display: none;
+    }
+}
+/* end loading bage */
